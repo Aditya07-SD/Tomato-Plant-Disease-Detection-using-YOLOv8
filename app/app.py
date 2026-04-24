@@ -4,6 +4,15 @@ from PIL import Image   # Python Imaging Library (PIL)- Used to open,processing 
 import numpy as np
 from solutions import disease_info
 
+import os
+import gdown
+
+MODEL_PATH = "../models/best.pt"
+
+if not os.path.exists(MODEL_PATH):
+    url = "https://drive.google.com/file/d/1PYhgwXozhhal53y5iffDruATJXXsn3CH/view?usp=drive_link"
+    gdown.download(url, MODEL_PATH, quiet=False)
+
 # -------------------------------
 # Load Model
 # -------------------------------
