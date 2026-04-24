@@ -10,20 +10,20 @@ import gdown
 # Upload on render
 # --------------------------------
 
-MODEL_PATH = "../models/best.pt"
+MODEL_PATH = "models/best.pt"
 
-os.makedirs("models",exist_ok=True)
+os.makedirs("models", exist_ok=True)
 
 # Download model if not exists
 if not os.path.exists(MODEL_PATH):
-    url = "https://drive.google.com/drive/folders/1sPxGUlLNJildK55f83mITWqRnl33eVwN?usp=sharing"
+    url = "https://drive.google.com/uc?id=1PYhgwXozhhal53y5iffDruATJXXsn3CH"
     gdown.download(url, MODEL_PATH, quiet=False)
 
 
 # -------------------------------
 # Load Model
 # -------------------------------
-model = YOLO("../models/best.pt")   # load trained model(best.pt), this is our AI brain 
+model = YOLO(MODEL_PATH)   # load trained model(best.pt), this is our AI brain 
 
 
 # -------------------------------
