@@ -12,3 +12,7 @@ streamlit run app/app.py
 
 ## Note
 Model file (best.pt) not included due to size.
+
+
+## Link
+[Click Here to Use the App](https://tomato-plant-disease-detection-using-59mw.onrender.com/)
