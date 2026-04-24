@@ -9,7 +9,7 @@ import gdown
 MODEL_PATH = "../models/best.pt"
 
 if not os.path.exists(MODEL_PATH):
-    url = "https://drive.google.com/file/d/1PYhgwXozhhal53y5iffDruATJXXsn3CH/view?usp=drive_link"
+    url = "https://drive.google.com/drive/folders/1sPxGUlLNJildK55f83mITWqRnl33eVwN?usp=sharing"
     gdown.download(url, MODEL_PATH, quiet=False)
 
 # -------------------------------
