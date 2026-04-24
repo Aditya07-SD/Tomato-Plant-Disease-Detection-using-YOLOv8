@@ -10,12 +10,9 @@ import gdown
 # Upload on render
 # --------------------------------
 
-MODEL_DIR = "models"
-MODEL_PATH = os.path.join(MODEL_DIR, "best.pt")
+MODEL_PATH = "../models/best.pt"
 
-# Create folder if not exists
-if not os.path.exists(MODEL_DIR):
-    os.makedirs(MODEL_DIR)
+os.makedirs("models",exist_ok=True)
 
 # Download model if not exists
 if not os.path.exists(MODEL_PATH):
