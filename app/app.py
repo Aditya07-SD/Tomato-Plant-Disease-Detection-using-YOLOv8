@@ -3,7 +3,6 @@ from ultralytics import YOLO
 from PIL import Image   # Python Imaging Library (PIL)- Used to open,processing and display images
 import numpy as np
 from solutions import disease_info
-
 import os
 import gdown
 
