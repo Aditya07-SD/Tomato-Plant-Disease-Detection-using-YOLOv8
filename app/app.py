@@ -6,11 +6,22 @@ from solutions import disease_info
 import os
 import gdown
 
-MODEL_PATH = "../models/best.pt"
+# --------------------------------
+# Upload on render
+# --------------------------------
 
+MODEL_DIR = "models"
+MODEL_PATH = os.path.join(MODEL_DIR, "best.pt")
+
+# Create folder if not exists
+if not os.path.exists(MODEL_DIR):
+    os.makedirs(MODEL_DIR)
+
+# Download model if not exists
 if not os.path.exists(MODEL_PATH):
     url = "https://drive.google.com/drive/folders/1sPxGUlLNJildK55f83mITWqRnl33eVwN?usp=sharing"
     gdown.download(url, MODEL_PATH, quiet=False)
+
 
 # -------------------------------
 # Load Model
