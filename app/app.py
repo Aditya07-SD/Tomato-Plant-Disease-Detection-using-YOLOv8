@@ -21,9 +21,13 @@ if not os.path.exists(MODEL_PATH):
 
 
 # -------------------------------
-# Load Model
+# Load Model (CACHED)
 # -------------------------------
-model = YOLO(MODEL_PATH)   # load trained model(best.pt), this is our AI brain 
+@st.cache_resource
+def load_model():
+    return YOLO(MODEL_PATH)
+
+model = load_model()
 
 
 # -------------------------------
